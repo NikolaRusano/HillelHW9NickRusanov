@@ -29,9 +29,41 @@ public class BookTester {
         bookCollection.add(book9);
         bookCollection.add(book10);
 
-        for(Book index:bookCollection){
-            if (bookCollection.
-            if (bookCollection.get)
+        System.out.println("All books: \n");
+        for(Book book:bookCollection) {
+            System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+        }
+       //System.out.println("All books: \n");
+        for(Book book:booksWithSoftCover) {
+            System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+        }
+        //System.out.println("All books: \n");
+        for(Book book:booksWithHardCover) {
+            System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+        }
+
+
+        for(Book book:bookCollection){
+            if (book.getCoverType() == "soft"){
+                System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+                System.out.println(booksWithSoftCover.add(book));
+
+
+            }else if (book.getCoverType() == "hard"){
+                System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+                System.out.println(booksWithHardCover.add(book));
+
+            }
+        }
+
+
+        System.out.println("\nSoft cover books\n");
+        for(Book book:booksWithSoftCover){
+            System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+        }
+        System.out.println("\nHard cover books\n");
+        for(Book book:booksWithSoftCover){
+            System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
         }
 
     }

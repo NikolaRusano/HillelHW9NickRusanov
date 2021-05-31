@@ -5,18 +5,20 @@ import java.util.List;
 public class Book {
     double price;
     String title;
-    final String[] coverType = {"hard", "soft"};
+    final String[] coverTypes = {"hard", "soft"};
+    String coverType;
+
 
     int quantityOfPages;
 
-    public Book(double price, String title, int quantityOfPages, String coverTypevar) {
+    public Book(double price, String title, int quantityOfPages, String coverType) {
         this.price = price;
         this.title = title;
         this.quantityOfPages = quantityOfPages;
-        if(coverType[0] == coverTypevar) {
-            this.coverType[0] = coverTypevar;
-        }if(coverType[1] == coverTypevar) {
-            this.coverType[1] = coverTypevar;
+        if(coverTypes[0] == coverType) {
+            this.coverType = coverType;
+        }else if(coverTypes[1] == coverType) {
+            this.coverType = coverType;
         }else{
             System.out.println("Incorrect input");
         }
@@ -38,7 +40,7 @@ public class Book {
         this.title = title;
     }
 
-    public String[] getCoverType() {
+    public String getCoverType() {
         return coverType;
     }
 
@@ -50,7 +52,5 @@ public class Book {
         this.quantityOfPages = quantityOfPages;
     }
 
-    public String getСoverType(int typenum){
-        return coverType[typenum];
-    }
+
 }
