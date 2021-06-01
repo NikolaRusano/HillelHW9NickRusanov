@@ -1,5 +1,7 @@
 package Task1;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 
 public class BookTester {
@@ -44,14 +46,15 @@ public class BookTester {
 
 
         for(Book book:bookCollection){
-            if (book.getCoverType() == "soft"){
-                System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
-                System.out.println(booksWithSoftCover.add(book));
+            if (book.getCoverType().equals("soft")){
+                //System.out.println(book.getCoverType().equals("soft"));
+                //System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+                booksWithSoftCover.add(book);
 
 
-            }else if (book.getCoverType() == "hard"){
-                System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
-                System.out.println(booksWithHardCover.add(book));
+            }else if (book.getCoverType().equals("hard")){
+                //System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
+               booksWithHardCover.add(book);
 
             }
         }
@@ -62,7 +65,7 @@ public class BookTester {
             System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
         }
         System.out.println("\nHard cover books\n");
-        for(Book book:booksWithSoftCover){
+        for(Book book:booksWithHardCover){
             System.out.println("Title " + book.getTitle() + " with " + book.getQuantityOfPages() + " pages" + " with $ " + book.getPrice() + " cover " + book.getCoverType());
         }
 
