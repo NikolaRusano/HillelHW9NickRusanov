@@ -1,4 +1,4 @@
-package src.Homework_Lesson6.Task_2;
+package Task2;
 
 import java.util.*;
 
